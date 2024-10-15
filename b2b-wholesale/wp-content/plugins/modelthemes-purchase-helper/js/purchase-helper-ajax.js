@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$.ajax({type:'POST',url:ajax_vars.ajax_url,data:{action:'load_purchase_helper',nonce:ajax_vars.nonce},success:function(response){if(response.success){$('body').append(response.data);}else{console.log('Nonce verification failed: '+response.data);}},error:function(){console.log('Failed to load purchase helper');}});});
